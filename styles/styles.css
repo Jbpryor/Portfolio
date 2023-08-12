@@ -939,6 +939,7 @@ section {
   .about-container {
     grid-template-columns: 1fr;
     text-align: center;
+    overflow: none;
   }
   .about-container .right-about {
     padding-top: 2.5rem;
