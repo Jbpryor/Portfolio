@@ -951,7 +951,7 @@ section {
     display: none;
   }
   .about-container .left-about p {
-    padding: 1rem;
+    padding: 3rem;
   }
   .about-stats .progress-bars {
     grid-template-columns: 1fr;
