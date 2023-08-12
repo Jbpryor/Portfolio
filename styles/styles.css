@@ -968,6 +968,9 @@ section {
   .about-container .left-about p {
     padding: 0;
   }
+  .about-container .left-about .btn-con {
+    justify-content: center;
+  }
   .about-stats .progress-bars {
     grid-template-columns: 1fr;
     align-items: center;
@@ -1021,8 +1024,46 @@ section {
   .main-title h2 .bg-text {
     font-size: 2.5rem;
   }
-  .contact-content-con .left-contact {
+  .contacts-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+  }
+  .contacts-container .contact-content-con .left-contact {
     padding-right: 0;
+  }
+  .contacts-container .contact-content-con .left-contact h4 {
+    font-size: 1.5rem;
+  }
+  .contacts-container .contact-content-con .left-contact .contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .contacts-container .contact-content-con .left-contact .contact-info .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+  .contacts-container .contact-content-con .left-contact .contact-info .contact-item .icon {
+    display: flex;
+    flex-direction: row;
+  }
+  .contacts-container .contact-content-con .left-contact .contact-info .contact-item .icon i {
+    padding-right: 0.5rem;
+  }
+  .contacts-container .contact-content-con .left-contact .contact-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .contacts-container .contact-content-con .left-contact .contact-icons .contact-icon {
+    margin-top: 1rem;
+  }
+  .contacts-container .contact-content-con .right-contact .contact-form .submit-btn {
+    justify-content: center;
   }
   .controlls {
     top: auto;
