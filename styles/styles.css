@@ -937,13 +937,27 @@ section {
 }
 @media screen and (max-width: 600px) {
   .about-container {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     overflow: none;
   }
   .about-container .right-about {
     padding-top: 2.5rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about-container .right-about .about-item {
+    width: 275px;
+    height: 100px;
+  }
+  .about-container .right-about .about-item .abt-text {
+    padding: 1rem;
+  }
+  .about-container .right-about .about-item .abt-text .large-text {
+    font-size: 1.5rem;
+  }
+  .about-container .right-about .about-item .abt-text .small-text {
+    font-size: 0.75rem;
   }
   .about-container .left-about {
     padding-right: 0;
@@ -952,7 +966,7 @@ section {
     display: none;
   }
   .about-container .left-about p {
-    padding: 3rem;
+    padding: 0;
   }
   .about-stats .progress-bars {
     grid-template-columns: 1fr;
@@ -973,7 +987,6 @@ section {
   }
   .timeline .timeline-item .tl-icon {
     left: 0;
-    margin-left: 5rem;
     width: 35px;
     height: 35px;
   }
@@ -984,8 +997,7 @@ section {
   .certificates {
     display: flex;
     flex-direction: column;
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
+    width: 100%;
   }
   .certificates .certificate .certificate-text {
     display: flex;
@@ -1001,13 +1013,13 @@ section {
     padding: 2rem 2.5rem;
   }
   .main-title h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .main-title h2 span {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .main-title h2 .bg-text {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .contact-content-con .left-contact {
     padding-right: 0;

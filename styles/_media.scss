@@ -155,12 +155,26 @@
 
 @media screen and (max-width: 600px) {
     .about-container {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;        ;
         text-align: center;
         overflow: none;
         .right-about {
             padding-top: 2.5rem;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(1, 1fr);
+            .about-item {
+                width: 275px;
+                height: 100px;
+                .abt-text {
+                    padding: 1rem;
+                    .large-text {
+                        font-size: 1.5rem;
+                    }
+                    .small-text {
+                        font-size: .75rem;
+                    }
+                }
+            }
         }
         .left-about {
             padding-right: 0;
@@ -170,7 +184,7 @@
                 }
             }
             p {
-                padding: 3rem;
+                padding: 0;
             }
         }
     }
@@ -195,7 +209,6 @@
             padding-bottom: 2rem;
             .tl-icon {
                 left: 0;
-                margin-left: 5rem;
                 width: 35px;
                 height: 35px;
             }
@@ -210,8 +223,8 @@
     .certificates {
         display: flex;
         flex-direction: column;
-        grid-template-columns: 1fr;
-        padding-bottom: 6rem;
+        width: 100%;
+        // padding-bottom: 6rem;
         .certificate {
             .certificate-text {
                 display: flex;
@@ -232,12 +245,12 @@
 
     .main-title {
         h2 {
-            font-size: 2rem;
+            font-size: 1.5rem;
             span {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             .bg-text {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
         }
     }
