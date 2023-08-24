@@ -85,7 +85,7 @@ function sendEmail() {
         message: document.getElementById("message").value,
     };
 
-    const serviceID = "service_ca48i2m";
+    const serviceID = "service_husq3kf";
     const templateID = "template_q7yi1ac"
 
     emailjs
