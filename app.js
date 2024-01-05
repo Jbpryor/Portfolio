@@ -6,7 +6,7 @@ const allSections = document.querySelector('.main-content');
 
 function PageTransitions(){
     // Button click active class
-    for(let i = 0; i < sectBtn.length; i++) {
+    for (let i = 0; i < sectBtn.length; i++) {
         sectBtn[i].addEventListener('click', (event) => {
             let currentBtn = document.querySelectorAll('.active-btn');
             currentBtn[0].className = currentBtn[0].className.replace('active-btn', '');
@@ -142,3 +142,39 @@ fullScreenCertificatesText.forEach(certificate => {
         openFullScreenCertificate({ target: certificateImg });
     });
 });
+
+// For scroll animation
+
+var timeoutIds = {}; // Object to store timeout IDs for each element
+var lastScrollTop = 0;
+
+function popout() {
+    var aboutItem = document.querySelectorAll(".about-item");
+    var scrollDirection = getScrollDirection();
+
+    for (var i = 0; i < aboutItem.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementBottom = aboutItem[i].getBoundingClientRect().bottom;
+
+        if (scrollDirection === 'down' && elementBottom >= windowHeight / 2) {
+            aboutItem[i].classList.add('active');
+            
+            clearTimeout(timeoutIds[i]);
+            timeoutIds[i] = setTimeout(function(index) {
+                aboutItem[index].classList.remove('active');
+            }, 500, i);
+        }
+    }
+}
+
+function getScrollDirection() {
+    var st = window.scrollY || document.documentElement.scrollTop;
+    var direction = st > lastScrollTop ? 'down' : 'up';
+    lastScrollTop = st;
+    return direction;
+}
+
+window.addEventListener('scroll', popout);
+
+
+

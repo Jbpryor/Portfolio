@@ -283,6 +283,12 @@ section {
   border: 1px solid var(--color-secondary);
   box-shadow: 1px 40px 15px rgba(0, 0, 0, 0.32);
 }
+.about-container .right-about .about-item.active {
+  cursor: default;
+  transform: translateY(-5px);
+  border: 1px solid var(--color-secondary);
+  box-shadow: 1px 40px 15px rgba(0, 0, 0, 0.32);
+}
 .about-container .right-about .about-item .abt-text {
   padding: 1.5rem;
   display: flex;
@@ -345,7 +351,7 @@ section {
 }
 .about-stats .progress-bars {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 .about-stats .progress-bars .progress-bar {
@@ -379,7 +385,7 @@ section {
   background-color: var(--color-secondary);
   transition: all 0.4s ease-in-out;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .html {
+.about-stats .progress-bars .progress-bar .progress-con .progress .sql {
   width: 100%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .css {
@@ -398,6 +404,15 @@ section {
   width: 100%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .react {
+  width: 100%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .node {
+  width: 100%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .mongodb {
+  width: 100%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .csharp {
   width: 100%;
 }
 
@@ -585,7 +600,7 @@ section {
 
 .certificates {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 3rem;
 }

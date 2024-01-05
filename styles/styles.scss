@@ -286,7 +286,13 @@ section {
                 transform: translateY(-5px);
                 border: 1px solid var(--color-secondary);
                 box-shadow: 1px 40px 15px rgba(0,0,0,.32);
-            }
+            }              
+            &.active {
+                cursor: default;
+                transform: translateY(-5px);
+                border: 1px solid var(--color-secondary);
+                box-shadow: 1px 40px 15px rgba(0,0,0,.32);
+            }              
             .abt-text {
                 padding: 1.5rem;
                 display: flex;
@@ -352,7 +358,7 @@ section {
     padding-bottom: 4rem;
     .progress-bars {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
         .progress-bar {
             display: flex;
@@ -383,7 +389,7 @@ section {
                         transition: all .4s ease-in-out;
                     }
 
-                    .html {
+                    .sql {
                         width: 100%;
                     }
                     .css {
@@ -402,6 +408,15 @@ section {
                         width: 100%;
                     }
                     .react {
+                        width: 100%;
+                    }
+                    .node {
+                        width: 100%;
+                    }
+                    .mongodb {
+                        width: 100%;
+                    }
+                    .csharp {
                         width: 100%;
                     }
                 }
@@ -600,7 +615,7 @@ section {
 
 .certificates {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 3rem;
     .certificate {
