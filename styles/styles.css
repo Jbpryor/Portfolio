@@ -492,7 +492,7 @@ section {
 
 .portfolios {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
   margin-top: 3rem;
   border-radius: 15px;
@@ -504,6 +504,7 @@ section {
   box-sizing: border-box;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.32);
+  width: 1000px;
 }
 .portfolios .portfolio-item .image {
   width: 100%;
@@ -515,8 +516,8 @@ section {
 }
 .portfolios .portfolio-item img {
   position: relative;
-  width: 100%;
-  height: 300px;
+  width: 1000px;
+  height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -536,8 +537,8 @@ section {
   transform: scale(0);
   transition: all 0.4s ease-in-out;
 }
-.portfolios .portfolio-item .hover-items h3 {
-  font-size: 1.5rem;
+.portfolios .portfolio-item .hover-items h2 {
+  font-size: 1.75rem;
   color: var(--color-black);
   margin-bottom: 1.5rem;
 }
@@ -546,7 +547,19 @@ section {
   justify-content: center;
   align-items: center;
 }
-.portfolios .portfolio-item .hover-items .icons .icon {
+.portfolios .portfolio-item .hover-items .icons .icon-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.portfolios .portfolio-item .hover-items .icons .icon-container h3 {
+  font-size: 1.5rem;
+  color: var(--color-black);
+  padding: 1rem;
+}
+.portfolios .portfolio-item .hover-items .icons .icon-container .icon {
   background-color: var(--color-primary);
   border-radius: 50%;
   width: 50px;
@@ -558,16 +571,20 @@ section {
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 }
-.portfolios .portfolio-item .hover-items .icons .icon i {
+.portfolios .portfolio-item .hover-items .icons .icon-container .icon i {
   font-size: 1.5rem;
   color: var(--color-black);
   margin: 0 1rem;
 }
-.portfolios .portfolio-item .hover-items .icons .icon:hover {
+.portfolios .portfolio-item .hover-items .icons .icon-container .icon:hover {
   background-color: var(--color-black);
 }
-.portfolios .portfolio-item .hover-items .icons .icon:hover i {
+.portfolios .portfolio-item .hover-items .icons .icon-container .icon:hover i {
   color: var(--color-primary);
+}
+.portfolios .portfolio-item .hover-items p {
+  padding: 1rem 2rem;
+  font-weight: 500;
 }
 
 .portfolio-item:hover .hover-items {
