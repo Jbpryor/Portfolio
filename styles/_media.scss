@@ -55,11 +55,53 @@
     }
 }
 
-@media screen and (max-width: 1070px) {
-
+@media screen and (max-width: 1400px) {
     .portfolios {
-        grid-template-columns: 1fr 1fr;
+        .portfolio-item {    
+            img {
+                width: 700px;
+                height: 350px;
+            }
+
+            .hover-items {
+    
+                h2 {
+                    font-size: 1.5rem;
+                    margin-bottom: 0;
+                }
+    
+                .icons {
+    
+                    .icon-container {
+                        
+                        h3 {
+                            font-size: 1.25rem;
+                            padding: .75rem;
+                        }
+    
+                        .icon {
+                            width: 40px;
+                            height: 40px;
+                            margin: 0;
+        
+                            i {
+                                font-size: 1.25rem;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+    
+                p {
+                    padding: 0rem 2rem;
+                    font-size: .85rem;
+                }
+            }
+        }
     }
+}
+
+@media screen and (max-width: 1070px) {
 
     .certificates {
         grid-template-columns: 1fr 1fr;
@@ -122,6 +164,15 @@
     .header-content .left-header .image {
         width: 90%;
     }
+
+    .portfolios {
+        .portfolio-item {    
+            img {
+                width: 600px;
+                height: 300px;
+            }
+        }
+    }
  
     .controlls {
         top: auto;
@@ -147,6 +198,46 @@
         .about-stats {
             .progress-bars {
                 grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    .portfolios {
+        .portfolio-item {    
+            img {
+                width: 500px;
+                height: 250px;
+            }
+
+            .hover-items {
+    
+                h2 {
+                    font-size: 1.75rem;
+                    margin-bottom: 0;
+                }
+    
+                .icons {
+    
+                    .icon-container {
+                        
+                        h3 {
+                            font-size: 1.25rem;
+                        }
+    
+                        .icon {
+                            width: 50px;
+                            height: 50px;
+        
+                            i {
+                                font-size: 1.25rem;
+                            }
+                        }
+                    }
+                }
+    
+                p {
+                    display: none;
+                }
             }
         }
     }
@@ -219,15 +310,18 @@
     }
 
     .portfolios {
-        grid-template-columns: 1fr;
-        padding-bottom: 6rem;
+        .portfolio-item {    
+            img {
+                width: 400px;
+                height: 200px;
+            }
+        }
     }
 
     .certificates {
         display: flex;
         flex-direction: column;
         width: 100%;
-        // padding-bottom: 6rem;
         .certificate {
             .certificate-text {
                 display: flex;
@@ -318,6 +412,44 @@
         background-color: transparent;
         .control {
             margin: .2rem .3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .portfolios {
+        .portfolio-item {    
+            img {
+                width: 300px;
+                height: 150px;
+            }
+
+            .hover-items {
+    
+                h2 {
+                    display: none;
+                }
+    
+                .icons {
+    
+                    .icon-container {
+                        padding: .5rem;
+
+                        h3 {
+                            font-size: 1rem;
+                        }
+    
+                        .icon {
+                            width: 40px;
+                            height: 40px;
+        
+                            i {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

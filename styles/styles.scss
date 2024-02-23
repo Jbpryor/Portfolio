@@ -501,11 +501,16 @@ section {
 }
 
 .portfolios {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
     margin-top: 3rem;
     border-radius: 15px;
+
+    display: flex;
+    justify-content: center; /* Horizontally center the portfolio items */
+    align-items: center;
+    flex-direction: column; /* Vertically center the portfolio items */
 
     
     .portfolio-item {
@@ -515,8 +520,6 @@ section {
         box-sizing: border-box;
         overflow: hidden;
         background-color: rgba(0,0,0,.32);
-        width: 1000px;
-
         
         .image {
             width: 100%;
@@ -605,6 +608,7 @@ section {
             p {
                 padding: 1rem 2rem;
                 font-weight: 500;
+                text-align: center;
             }
         }
     }

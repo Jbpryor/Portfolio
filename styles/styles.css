@@ -491,11 +491,13 @@ section {
 }
 
 .portfolios {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
   margin-top: 3rem;
   border-radius: 15px;
+  display: flex;
+  justify-content: center; /* Horizontally center the portfolio items */
+  align-items: center;
+  flex-direction: column; /* Vertically center the portfolio items */
 }
 .portfolios .portfolio-item {
   position: relative;
@@ -504,7 +506,6 @@ section {
   box-sizing: border-box;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.32);
-  width: 1000px;
 }
 .portfolios .portfolio-item .image {
   width: 100%;
@@ -585,6 +586,7 @@ section {
 .portfolios .portfolio-item .hover-items p {
   padding: 1rem 2rem;
   font-weight: 500;
+  text-align: center;
 }
 
 .portfolio-item:hover .hover-items {
@@ -895,10 +897,34 @@ section {
     gap: 1rem;
   }
 }
-@media screen and (max-width: 1070px) {
-  .portfolios {
-    grid-template-columns: 1fr 1fr;
+@media screen and (max-width: 1400px) {
+  .portfolios .portfolio-item img {
+    width: 700px;
+    height: 350px;
   }
+  .portfolios .portfolio-item .hover-items h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  .portfolios .portfolio-item .hover-items .icons .icon-container h3 {
+    font-size: 1.25rem;
+    padding: 0.75rem;
+  }
+  .portfolios .portfolio-item .hover-items .icons .icon-container .icon {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+  }
+  .portfolios .portfolio-item .hover-items .icons .icon-container .icon i {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  .portfolios .portfolio-item .hover-items p {
+    padding: 0rem 2rem;
+    font-size: 0.85rem;
+  }
+}
+@media screen and (max-width: 1070px) {
   .certificates {
     grid-template-columns: 1fr 1fr;
   }
@@ -947,6 +973,10 @@ section {
   .header-content .left-header .image {
     width: 90%;
   }
+  .portfolios .portfolio-item img {
+    width: 600px;
+    height: 300px;
+  }
   .controlls {
     top: auto;
     bottom: 0;
@@ -967,6 +997,27 @@ section {
   }
   .about-stats .progress-bars .about-stats .progress-bars {
     grid-template-columns: 1fr;
+  }
+  .portfolios .portfolio-item img {
+    width: 500px;
+    height: 250px;
+  }
+  .portfolios .portfolio-item .hover-items h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0;
+  }
+  .portfolios .portfolio-item .hover-items .icons .icon-container h3 {
+    font-size: 1.25rem;
+  }
+  .portfolios .portfolio-item .hover-items .icons .icon-container .icon {
+    width: 50px;
+    height: 50px;
+  }
+  .portfolios .portfolio-item .hover-items .icons .icon-container .icon i {
+    font-size: 1.25rem;
+  }
+  .portfolios .portfolio-item .hover-items p {
+    display: none;
   }
 }
 @media screen and (max-width: 600px) {
@@ -1027,9 +1078,9 @@ section {
     width: 35px;
     height: 35px;
   }
-  .portfolios {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
+  .portfolios .portfolio-item img {
+    width: 400px;
+    height: 200px;
   }
   .certificates {
     display: flex;
@@ -1111,5 +1162,27 @@ section {
   }
   .controlls .control {
     margin: 0.2rem 0.3rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .portfolios .portfolio-item img {
+    width: 300px;
+    height: 150px;
+  }
+  .portfolios .portfolio-item .hover-items h2 {
+    display: none;
+  }
+  .portfolios .portfolio-item .hover-items .icons .icon-container {
+    padding: 0.5rem;
+  }
+  .portfolios .portfolio-item .hover-items .icons .icon-container h3 {
+    font-size: 1rem;
+  }
+  .portfolios .portfolio-item .hover-items .icons .icon-container .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .portfolios .portfolio-item .hover-items .icons .icon-container .icon i {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=styles.css.map */
