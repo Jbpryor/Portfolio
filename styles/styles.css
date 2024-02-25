@@ -923,10 +923,13 @@ section {
     padding: 0rem 2rem;
     font-size: 0.85rem;
   }
+  .certificates .certificate img {
+    height: 250px;
+  }
 }
 @media screen and (max-width: 1070px) {
-  .certificates {
-    grid-template-columns: 1fr 1fr;
+  .certificates .certificate img {
+    height: 200px;
   }
   .main-title h2 {
     font-size: 4rem;
@@ -977,6 +980,9 @@ section {
     width: 600px;
     height: 300px;
   }
+  .certificates .certificate img {
+    height: 175px;
+  }
   .controlls {
     top: auto;
     bottom: 0;
@@ -1019,6 +1025,24 @@ section {
   .portfolios .portfolio-item .hover-items p {
     display: none;
   }
+  .certificates {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .certificates .certificate img {
+    height: 350px;
+  }
+  .certificates .certificate .certificate-text {
+    display: flex;
+    flex-direction: column;
+    padding: none;
+  }
+  .certificates .certificate .certificate-text p {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0;
+  }
 }
 @media screen and (max-width: 600px) {
   .about-container {
@@ -1030,6 +1054,7 @@ section {
   .about-container .right-about {
     padding-top: 2.5rem;
     grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 6.5rem;
   }
   .about-container .right-about .about-item {
     width: 275px;
@@ -1082,20 +1107,14 @@ section {
     width: 400px;
     height: 200px;
   }
-  .certificates {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  .certificates .certificate img {
+    height: auto;
   }
-  .certificates .certificate .certificate-text {
-    display: flex;
-    flex-direction: column;
-    padding: none;
+  .certificates .certificate h4 {
+    font-size: 1rem;
   }
-  .certificates .certificate .certificate-text p {
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 0;
+  .certificates .certificate p {
+    font-size: 0.85rem;
   }
   .section {
     padding: 2rem 2.5rem;
@@ -1184,5 +1203,14 @@ section {
   }
   .portfolios .portfolio-item .hover-items .icons .icon-container .icon i {
     font-size: 1rem;
+  }
+  .certificates .certificate {
+    background-color: #f8f8f8;
+    padding-top: 0.5rem;
+    height: auto;
+    border: 2px solid var(--color-secondary);
+  }
+  .certificates .certificate .certificate-text {
+    display: none;
   }
 }/*# sourceMappingURL=styles.css.map */

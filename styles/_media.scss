@@ -99,12 +99,23 @@
             }
         }
     }
+    .certificates {
+        .certificate {
+            img {
+                height: 250px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1070px) {
 
     .certificates {
-        grid-template-columns: 1fr 1fr;
+        .certificate {
+            img {
+                height: 200px;
+            }
+        }
     }
 
     .main-title {
@@ -170,6 +181,14 @@
             img {
                 width: 600px;
                 height: 300px;
+            }
+        }
+    }
+
+    .certificates {
+        .certificate {
+            img {
+                height: 175px;
             }
         }
     }
@@ -242,6 +261,26 @@
         }
     }
 
+    .certificates {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .certificate {
+            img {
+                height: 350px;
+            }
+            .certificate-text {
+                display: flex;
+                flex-direction: column;
+                padding: none;
+                p {
+                    display: flex;
+                    flex-direction: row;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -253,6 +292,7 @@
         .right-about {
             padding-top: 2.5rem;
             grid-template-columns: repeat(1, 1fr);
+            margin-bottom: 6.5rem;
             .about-item {
                 width: 275px;
                 height: 100px;
@@ -319,19 +359,15 @@
     }
 
     .certificates {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
         .certificate {
-            .certificate-text {
-                display: flex;
-                flex-direction: column;
-                padding: none;
-                p {
-                    display: flex;
-                    flex-direction: row;
-                    padding-bottom: 0;
-                }
+            img {
+                height: auto;
+            }
+            h4 {
+                font-size: 1rem;
+            }
+            p {
+                font-size: .85rem;
             }
         }
     }
@@ -399,8 +435,7 @@
             }
         }
     }
-    
-    
+        
     .controlls {
         top: auto;
         bottom: 0;
@@ -449,6 +484,18 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .certificates {
+        .certificate {
+            background-color: #f8f8f8;
+            padding-top: .5rem;
+            height: auto;
+            border: 2px solid var(--color-secondary);
+            .certificate-text {
+                display: none;
             }
         }
     }
